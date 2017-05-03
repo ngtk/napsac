@@ -1,3 +1,5 @@
+notification :terminal_notifier if `uname` =~ /Darwin/
+
 guard :shell do
   watch /provisioning\/roles\/(.*)\/(tasks|vars)\/.*\.yml/ do |match|
     puts "#{match[0]} has changed"
