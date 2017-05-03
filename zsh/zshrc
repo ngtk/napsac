@@ -1,4 +1,24 @@
 # Anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
 if [ -d $HOME/.anyenv ]; then
   eval "$(anyenv init -)"
 fi
+
+# zplug
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+# Theme
+zplug 'themes/miloshadzic', \
+    as:theme, \
+    from:oh-my-zsh, \
+    use:miloshadzic.zsh-theme
+
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+fi
+
+zplug load  --verbose
