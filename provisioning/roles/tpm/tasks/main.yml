@@ -1,0 +1,4 @@
+- name: clone tpm
+  git:
+    repo: https://github.com/tmux-plugins/tpm
+    dest: '{{ home_path }}/.tmux/plugins/tpm'
