@@ -17,3 +17,5 @@
       tags: ['homebrew']
     - role: ruby
       tags: ['ruby']
+    - role: minikube
+      tags: ['minikube']
