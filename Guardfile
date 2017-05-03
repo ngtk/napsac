@@ -10,4 +10,14 @@ guard :shell do
     end
     system cmd
   end
+
+  watch /provisioning\/.*/ do
+    cmd = "./provisioning/play.sh"
+    if system(cmd)
+      n "success", "Provisioning", :success
+    else
+      n "failed", "Provisioning", :failed
+    end
+    system cmd
+  end
 end
