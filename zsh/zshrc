@@ -50,3 +50,12 @@ fo() {
     [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
   fi
 }
+
+# ls colors
+# --------------------------------------------------------------------------
+alias ls='gls --color=auto'
+eval $(gdircolors ~/.dircolors)
+
+if [ -n "$LS_COLORS"  ]; then
+  zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+fi
