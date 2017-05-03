@@ -1,2 +1,18 @@
+anyenv:
+  dir:         '{{ home_path }}/.anyenv'
+  plugins_dir: '{{ home_path }}/.anyenv/plugins'
+  envs_dir:    '{{ home_path }}/.anyenv/envs'
+
 link:
   zsh/zshrc: .zshrc
+
+ruby:
+  versions:
+    - 2.4.0
+
+  plugins_dir: '{{ anyenv.envs_dir }}/rbenv/plugins'
+
+  plugins:
+    - ianheggie/rbenv-binstubs
+    - sstephenson/rbenv-default-gems
+    - sstephenson/rbenv-gem-rehash

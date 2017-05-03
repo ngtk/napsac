@@ -13,3 +13,5 @@
       tags: ['zsh']
     - role: anyenv
       tags: ['anyenv']
+    - role: ruby
+      tags: ['ruby']
