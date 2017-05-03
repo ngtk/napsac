@@ -1,18 +1,25 @@
 # Anyenv
+# --------------------------------------------------------------------------
 export PATH="$HOME/.anyenv/bin:$PATH"
 if [ -d $HOME/.anyenv ]; then
   eval "$(anyenv init -)"
 fi
 
 # zplug
+# --------------------------------------------------------------------------
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-# Theme
-zplug 'themes/miloshadzic', \
+zplug "themes/miloshadzic", \
     as:theme, \
     from:oh-my-zsh, \
     use:miloshadzic.zsh-theme
+
+zplug "junegunn/fzf-bin", \
+    from:gh-r, \
+    as:command, \
+    rename-to:fzf, \
+    use:"*darwin*amd64*"
 
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
@@ -24,4 +31,22 @@ fi
 zplug load  --verbose
 
 # Alias
+# --------------------------------------------------------------------------
 source ~/.alias
+
+
+# fzf
+# --------------------------------------------------------------------------
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# - CTRL-O to open with `open` command,
+# - CTRL-E or Enter key to open with the $EDITOR
+fo() {
+  local out file key
+  IFS=$'\n' out=($(fzf-tmux --query="$1" --exit-0 --expect=ctrl-o,ctrl-e))
+  key=$(head -1 <<< "$out")
+  file=$(head -2 <<< "$out" | tail -1)
+  if [ -n "$file" ]; then
+    [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
+  fi
+}
