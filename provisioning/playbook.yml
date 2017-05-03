@@ -4,3 +4,4 @@
 
   roles:
     - role: zsh
+    - tags: ['zsh']
