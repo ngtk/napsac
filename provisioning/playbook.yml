@@ -13,5 +13,7 @@
       tags: ['zsh']
     - role: anyenv
       tags: ['anyenv']
+    - role: homebrew
+      tags: ['homebrew']
     - role: ruby
       tags: ['ruby']

@@ -16,3 +16,54 @@ ruby:
     - ianheggie/rbenv-binstubs
     - sstephenson/rbenv-default-gems
     - sstephenson/rbenv-gem-rehash
+
+homebrew:
+  applications:
+    - appcleaner
+    - atom
+    - docker
+    - firefox
+    - google-chrome
+    - google-hangouts
+    - google-japanese-ime
+    - iterm2
+    - karabiner
+    - skype
+    - vagrant
+    - licecap
+    - virtualbox
+    - vlc
+
+  repositories:
+    - homebrew/boneyard
+    - homebrew/dupes
+    - homebrew/science
+
+  packages:
+    - argon/mas/mas
+    - ctags
+    - git
+    - git-lfs
+    - git-now
+    - heroku-toolbelt
+    - hub
+    - imagemagick
+    - jq
+    - mercurial
+    - mongodb
+    - mysql
+    - nkf
+    - phantomjs
+    - postgresql
+    - pstree
+    - reattach-to-user-namespace
+    - redis
+    - sqlite
+    - terraform
+    - the_silver_searcher
+    - tig
+    - tmux
+    - tree
+    - w3m
+    - { name: 'wget', install_options: '--enable-iri' }
+    - xctool
