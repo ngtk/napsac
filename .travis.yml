@@ -7,7 +7,7 @@ sudo: required
 
 env:
   global:
-  - SKIP_TAGS=zsh
+  - SKIP_TAGS=zsh,ruby
 
 script:
 - ./up --skip-tags="$SKIP_TAGS" -vvvv
