@@ -13,7 +13,7 @@ guard :shell do
     system cmd
   end
 
-  watch /provisioning\/.*/ do
+  watch /provisioning\/(.*)^/ do
     cmd = "./provisioning/play.sh"
     if system(cmd)
       n "success", "Provisioning", :success
