@@ -11,5 +11,7 @@ done
 cd "$(dirname $0)"
 
 ansible-playbook \
+  -i 'localhost' \
+  --extra-vars='@config.yml' \
   ${ARGS[@]} \
   playbook.yml \

@@ -3,10 +3,18 @@
 set -eu
 set -o pipefail
 
+: ${NAPSAC_PATH:="$HOME/napsac"}
+
 ARGS=('')
 for a in "$@"; do
   ARGS=(${ARGS[@]} "$a")
 done
+
+clone_napsac() {
+  echo 'Cloning repo...'
+  git clone git@github.com:ngtk/napsac.git $NAPSAC_PATH
+  echo 'done'
+}
 
 install_homebrew() {
   command -v 'brew' > /dev/null 2>&1 && return
@@ -29,6 +37,7 @@ run_provisioning() {
 }
 
 main() {
+  clone_napsac
   install_homebrew
   install_ansible
   run_provisioning
