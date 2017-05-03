@@ -4,6 +4,7 @@ set -eu
 set -o pipefail
 
 : ${NAPSAC_PATH:="$HOME/napsac"}
+: ${NAPSAC_BRANCH:="master"}
 
 ARGS=('')
 for a in "$@"; do
@@ -11,9 +12,33 @@ for a in "$@"; do
 done
 
 clone_napsac() {
-  echo 'Cloning repo...'
-  git clone git@github.com:ngtk/napsac.git $NAPSAC_PATH
-  echo 'done'
+  local git_dir="$NAPSAC_PATH/.git"
+
+  if [ -d "$git_dir" ]; then
+    echo 'Updating repo...'
+
+    if [ "$(git --git-dir="$git_dir" symbolic-ref --short HEAD 2> /dev/null)" != "master" ]; then
+      echo 'skip (working on a non-master branch)'
+      return
+    fi
+
+    if ! git --git-dir="$git_dir" diff --no-ext-diff --quiet --exit-code > /dev/null 2>&1; then
+      echo 'skip (unstaged changes present)'
+      return
+    fi
+
+    if ! git --git-dir="$git_dir" diff-index --cached --quiet HEAD -- > /dev/null 2>&1; then
+      echo 'skip (uncommitted changes present)'
+      return
+    fi
+
+    git --git-dir="$git_dir" pull origin master
+    echo 'done'
+  elif ! [ -d "$NAPSAC_PATH" ]; then
+    echo 'Cloning repo...'
+    git clone --recursive git://github.com/creasty/dotfiles.git --branch $NAPSAC_BRANCH $NAPSAC_PATH
+    echo 'done'
+  fi
 }
 
 install_homebrew() {
