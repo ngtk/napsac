@@ -5,6 +5,7 @@ anyenv:
 
 link:
   zsh/zshrc: .zshrc
+  tmux/tmux.conf: .tmux.conf
 
 ruby:
   versions:
