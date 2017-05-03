@@ -10,7 +10,6 @@ guard :shell do
     else
       n "failed", "Provisioning", :failed
     end
-    system cmd
   end
 
   watch /provisioning\/(.*)^/ do
@@ -20,6 +19,5 @@ guard :shell do
     else
       n "failed", "Provisioning", :failed
     end
-    system cmd
   end
 end
