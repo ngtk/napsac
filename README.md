@@ -2,5 +2,5 @@
 packed necessary tools for development.
 
 ```
-$ curl -L https://raw.githubusercontent.com/ngtk/napsac/master/up | bash
+$ curl -L https://raw.githubusercontent.com/ngtk/napsac/master/unpack | bash
 ```

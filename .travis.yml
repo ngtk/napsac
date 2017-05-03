@@ -10,7 +10,7 @@ env:
   - SKIP_TAGS=zsh,ruby
 
 script:
-- ./up --skip-tags="$SKIP_TAGS" -vvvv
+- ./unpack --skip-tags="$SKIP_TAGS" -vvvv
 
 notifications:
   email: false
