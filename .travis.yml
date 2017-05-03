@@ -1,6 +1,7 @@
 language: objective-c
 os: osx
 osx_image: xcode7.3
+rvm: 2.4.0
 
 sudo: required
 
