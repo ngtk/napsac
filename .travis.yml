@@ -10,3 +10,8 @@ env:
 
 script:
 - ./up --skip-tags="$SKIP_TAGS" -vvvv
+
+notifications:
+  email: false
+  slack:
+    secure: Nrd1ejlY9x9OcIot2Bp7hYT0hmYCn3roz1ALU+IHVyayF/y4u6uubP+rid8FNakf3j/HBk9/AJsw6RhHo/ahqYNfYNVoKReb209VluNe2y0qwjRB/GsS3H+Acd8E01dkSgAx1IQFhk4bAYf3u1BzZCeG+nigqV5AKQw9awfTjQRpb9A2b6WsryKWjPThuGNpFptzNwjxRQ8iGnhjtkSqakEG5knU9XbsPrMyuzyNcJxqvxqPyFDIJ+I0P9l7QBfiVLyL1fGdH27uYT2sfAzeXvuuY0B0epIIdyEfHOACk0iFfrtr4S1hBU/A3r0ieRyijfMW+aqWiiKnLy59an+hij7FItbcB6MN1Ol/xBX99zkbxVMHBsz19wUmJDBxal89yn+2MDFqPY5O96HAfUMh4V5u3fpPiwI2K2lAJurbALTbQNZYsVrKva9p4//KYoL9vAUQQ4nCPmyvK+4y9r7zg1NmJh47/5oWMRT1QRpBeWTR5UcMITUgzm/Wsjy1UzvuR38dKx3pFffDhvqk/SdG+wq1tUDncu3spCnp8Feb91tdgeyIpZfpvUUJ64atxqG63LWCCmK5lHd133KiCVRep7YSMi3pztVbIX3KQ9XQ0rbbacUg1HpsWeQJeKaUjGdweE0Ygboggytyia3CH4fDgmBfWKWwKnl386gxfUMdI2s=
