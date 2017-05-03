@@ -2,6 +2,11 @@
   hosts: 127.0.0.1
   connection: local
 
+  vars:
+    home_path: '{{ lookup("env", "HOME") }}'
+
   roles:
     - role: zsh
       tags: ['zsh']
+    - role: anyenv
+      tags: ['anyenv']
