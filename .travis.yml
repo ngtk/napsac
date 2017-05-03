@@ -7,7 +7,7 @@ sudo: required
 
 env:
   global:
-  - SKIP_TAGS=zsh,ruby
+  - SKIP_TAGS=zsh,ruby,minikube
 
 script:
 - ./unpack --skip-tags="$SKIP_TAGS" -vvvv
