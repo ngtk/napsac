@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+run_provisioning() {
+  ansible-playbook provisioning/playbook.yml
+}
+
+main() {
+  run_provisioning
+}
+
+main
