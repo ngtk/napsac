@@ -36,7 +36,7 @@ clone_napsac() {
     echo 'done'
   elif ! [ -d "$NAPSAC_PATH" ]; then
     echo 'Cloning repo...'
-    git clone --recursive git://github.com/creasty/dotfiles.git --branch $NAPSAC_BRANCH $NAPSAC_PATH
+    git clone git://github.com/ngtk/napsac.git --branch $NAPSAC_BRANCH $NAPSAC_PATH
     echo 'done'
   fi
 }
