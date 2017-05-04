@@ -16,6 +16,7 @@
   lineinfile:
     dest: /etc/shells
     line: '{{ which_zsh.stdout }}'
+  become: yes
 
 - name: change login shell to zsh
   command: |
