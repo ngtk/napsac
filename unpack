@@ -58,7 +58,7 @@ install_ansible() {
 }
 
 run_provisioning() {
-  provisioning/play.sh ${ARGS[@]}
+  $NAPSAC_PATH/provisioning/play.sh ${ARGS[@]}
 }
 
 main() {
