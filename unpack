@@ -96,8 +96,8 @@ run_provisioning() {
 }
 
 main() {
-  clone_napsac
   check_xcode_license_approved
+  clone_napsac
   install_homebrew
   install_ansible
   run_provisioning
