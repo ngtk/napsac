@@ -7,6 +7,7 @@ sudo: required
 
 env:
   global:
+  - DOTFILES_NOEDIT_SECRETS=1
   - SKIP_TAGS=zsh,ruby,minikube
 
 script:
