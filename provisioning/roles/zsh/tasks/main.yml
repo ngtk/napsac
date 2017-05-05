@@ -26,7 +26,6 @@
   retries: 3
   when: |
     lookup("env", "SHELL") != which_zsh.stdout
-  become: yes
 
 - name: install zplug
   homebrew:
