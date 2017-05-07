@@ -31,3 +31,15 @@
   homebrew:
     name: zplug
     state: present
+
+- name: Clone dircolors solarized config file
+  git:
+    repo: https://github.com/seebi/dircolors-solarized.git
+    dest: '{{ home_path }}/.dircolors-solarized'
+    accept_hostkey: yes
+
+- name: Link dircolors
+  file:
+    src: '{{ home_path }}/.dircolors-solarized/dircolors.ansi-dark'
+    dest: '{{ home_path }}/.dircolors'
+    state: link
