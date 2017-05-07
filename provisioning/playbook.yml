@@ -14,6 +14,8 @@
       tags: ['link']
     - role: terminal
       tags: ['terminal']
+    - role: macos
+      tags: ['macos']
     - role: zsh
       tags: ['zsh']
     - role: anyenv
