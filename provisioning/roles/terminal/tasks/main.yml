@@ -1,0 +1,12 @@
+- name: clone solarized terminal profile
+  git:
+    repo=https://github.com/tomislav/osx-terminal.app-colors-solarized
+    dest=/tmp/solarized
+    accept_hostkey=yes
+- name: load solarized dark profile
+  command: open "/tmp/solarized/Solarized Dark.terminal"
+- name: load solarized light profile
+  command: open "/tmp/solarized/Solarized Light.terminal"
+- name: set Solarized Dark to default profile
+  command: |
+    osascript -e "tell application \"Terminal\" to set default settings to settings set \"Solarized Dark\""
