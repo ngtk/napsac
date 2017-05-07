@@ -1,4 +1,4 @@
 - name: set initial key repeat
   command: defaults write -g InitialKeyRepeat -int 10
 - name: set key repeat
-  command: defaults write -g KeyRepeat -int 1.33
+  command: defaults write -g KeyRepeat -int 1.8
