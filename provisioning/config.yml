@@ -4,7 +4,9 @@ anyenv:
   envs_dir:    '{{ home_path }}/.anyenv/envs'
 
 link:
+  bash/bash_profile: .bash_profile
   zsh/zshrc: .zshrc
+  zsh/alias: .alias
   tmux/tmux.conf: .tmux.conf
 
 ruby:

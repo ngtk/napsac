@@ -1,0 +1,82 @@
+#!/bin/zsh
+
+# Edit this file
+alias vialias='vi ~/.alias && source ~/.alias'
+
+# Tmux
+alias tls='tmux ls'
+alias att='tmux attach-session -d -t'
+alias tkill='tmux kill-session -t'
+alias tnew='tmux new -s'
+alias vitmux='vi ~/.tmux.conf && tmux source-file ~/.tmux.conf && tmux display-message "reloading config..."'
+
+# OSX APP
+alias safari="open -a Safari"
+alias preview="open -a Preview"
+
+# Edit .vimrc
+alias vimrc='vi ~/.vimrc -c "CtrlP ~/.vim/userautoload"'
+alias vimp='vi ~/.vim/plug.vim && vi +PlugClean +PlugInstall +qa!'
+
+# Edit .fzf.zsh
+alias vifzf='vi ~/.fzf.zsh && source ~/.fzf.zsh'
+
+# rm
+alias rmdir='rm -rf'
+
+# git
+alias g='git'
+alias gg='git grep'
+alias gra='git graph'
+alias st='git status -s'
+alias cm='git commit -v'
+alias recm='git commit -v --amend'
+alias add='git add'
+alias co='git checkout'
+alias c='git checkout $(git branch | sort -r | peco | sed -e "s/* //")'
+alias master='git checkout master'
+alias develop='git checkout develop'
+alias cobr='git checkout -b'
+alias br='git branch'
+alias rmbr='git branch -d'
+alias gdiff='git diff'
+#alias push='git push'
+alias push='git push origin'
+alias pull='git pull'
+alias latest='git latest | less'
+alias ci='git ci-status'
+
+alias vigit='vi ~/.gitconfig'
+
+# rake
+alias rakepeco='$(rake -T | peco |  sed -e "s/#.*//" )'
+
+# pry
+alias vipry='vi ~/.pryrc'
+
+# ssh
+alias vissh='vi ~/.ssh/config'
+alias lsssh='view ~/.ssh/config -R'
+alias visshlog='vi ~/.ssh/known_hosts'
+
+# clear
+alias cl='clear'
+
+# ec2ssh
+alias ec2ssh='ec2ssh update;ec2ssh update --aws-key nislab'
+
+# peco
+if [ -x "`which peco`" ]; then
+  alias ll='ls -la | peco'
+  alias tp='top | peco'
+  alias pp='ps aux | peco'
+fi
+
+# pry
+alias vipry='vi ~/.pryrc'
+
+# memo
+alias memo='vi -c :MemoNew'
+
+# source zshrc
+alias sourcezshrc='source ~/.zshrc'
