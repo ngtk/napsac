@@ -7,6 +7,7 @@ link:
   bash/bash_profile: .bash_profile
   zsh/zshrc: .zshrc
   zsh/alias: .alias
+  git/gitconfig: .gitconfig
   tmux/tmux.conf: .tmux.conf
 
 ruby:

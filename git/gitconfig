@@ -1,0 +1,37 @@
+[color]
+	ui = auto
+[user]
+	name = Kent Nagata
+	email = ngtknt@me.com
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[alias]
+	see = browse
+[push]
+	default = simple
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[alias]
+  st=status
+  pr=pull-request
+  ci=ci-status
+  showst=show --stat
+  r=reset
+  cancel=reset --soft HEAD^
+  rt=replace-text
+  current-branch = rev-parse --abbrev-ref HEAD
+[ghq]
+  root = ~/code
+  root = ~/.go
+  root = ~/.homesick/repos
+  root = ~/.vim/plugged
+[github]
+	user = ngtk
+[init]
+	templatedir = ~/.git/template
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
