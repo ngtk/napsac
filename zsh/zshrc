@@ -51,6 +51,17 @@ fo() {
   fi
 }
 
+function fcd-ghq () {
+  local selected_dir=$(ghq list -p| fzf)
+  if [ -n "$selected_dir"  ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N fcd-ghq
+bindkey '^]' fcd-ghq
+
 # ls colors
 # --------------------------------------------------------------------------
 alias ls='gls --color=auto'
