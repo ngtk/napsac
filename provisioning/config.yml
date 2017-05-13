@@ -9,6 +9,8 @@ link:
   zsh/alias: .alias
   git/gitconfig: .gitconfig
   tmux/tmux.conf: .tmux.conf
+  vim/conf: .vim
+  vim/vimrc: .vimrc
 
 ruby:
   versions:

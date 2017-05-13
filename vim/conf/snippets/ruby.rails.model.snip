@@ -1,0 +1,31 @@
+include ruby.snip
+
+snippet     belongs_to
+abbr        belongs_to :name
+options     word
+  belongs_to ${1::name}
+
+snippet     has_many
+abbr        has_many :name
+options     word
+  has_many ${1::name}
+
+snippet     validates presence
+abbr        validates :name, presence: true
+options     head
+  validates ${1:::attribute}, presence: true
+
+snippet     validates length
+abbr        validates :name, length: { maximum: number }
+options     word
+  validates ${1::name}, length: { maximum: ${2:number} }
+
+snippet     validates uniqueness
+abbr        validates :name, uniqueness: true
+options     word
+  validates ${1::name}, uniqueness: true
+
+snippet     scope
+abbr        scope (:name), -> { ... }
+options     word
+  scope (${1:name}), -> { ${2:...} }
