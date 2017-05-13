@@ -24,6 +24,8 @@
       tags: ['homebrew']
     - role: tpm
       tags: ['tpm']
+    - role: vim
+      tags: ['vim']
     - role: ruby
       tags: ['ruby']
     - role: minikube
