@@ -50,6 +50,7 @@ homebrew:
     - git
     - git-lfs
     - git-now
+    - ghq
     - heroku-toolbelt
     - hub
     - imagemagick
