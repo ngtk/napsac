@@ -1,5 +1,5 @@
 - set_fact:
-  golang: {}
+    golang: {}
 
 - name: check goenv
   command: |
