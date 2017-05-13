@@ -28,5 +28,7 @@
       tags: ['vim']
     - role: ruby
       tags: ['ruby']
+    - role: golang
+      tags: ['golang']
     - role: minikube
       tags: ['minikube']
