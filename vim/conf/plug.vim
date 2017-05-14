@@ -48,7 +48,7 @@ Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx'] }
 Plug 'nathanaelkane/vim-indent-guides', { 'for': ['python'], 'on': ['IndentGuidesEnable', 'IndentGuidesToggle']  }
 Plug 'ngmy/vim-rubocop'
 " O
-Plug 'open-browser.vim'
+" Plug 'open-browser.vim'
 Plug 'osyo-manga/vim-anzu'
 Plug 'osyo-manga/vim-over'
 " P
