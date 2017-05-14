@@ -33,7 +33,7 @@ alias cm='git commit -v'
 alias recm='git commit -v --amend'
 alias add='git add'
 alias co='git checkout'
-alias c='git checkout $(git branch | sort -r | peco | sed -e "s/* //")'
+alias c='git checkout $(git branch | sort -r | fzf | sed -e "s/* //")'
 alias master='git checkout master'
 alias develop='git checkout develop'
 alias cobr='git checkout -b'
@@ -80,3 +80,6 @@ alias memo='vi -c :MemoNew'
 
 # source zshrc
 alias sourcezshrc='source ~/.zshrc'
+
+# bundler
+alias be='bundle exec'
