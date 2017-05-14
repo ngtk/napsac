@@ -5,6 +5,9 @@ if [ -d $HOME/.anyenv ]; then
   eval "$(anyenv init -)"
 fi
 
+# Go
+export PATH="$HOME/go/bin/:$PATH"
+
 # zplug
 # --------------------------------------------------------------------------
 export ZPLUG_HOME=/usr/local/opt/zplug
