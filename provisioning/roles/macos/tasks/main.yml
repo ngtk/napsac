@@ -2,3 +2,17 @@
   command: defaults write -g InitialKeyRepeat -int 10
 - name: set key repeat
   command: defaults write -g KeyRepeat -int 1.8
+
+- name: Check screenshots dir exists
+  stat:
+    path: '{{ home_path }}/screenshots'
+  register: screenshots_dir_fm
+
+- name: Create screenshots dir
+  file:
+    path: '{{ home_path }}/screenshots'
+    state: directory
+  when: not screenshots_dir_fm.stat.exists
+
+- name: Set screenshots location
+  shell: 'defaults write com.apple.screencapture location {{ home_path }}/screenshots'
