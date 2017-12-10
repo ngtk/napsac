@@ -74,3 +74,23 @@ homebrew:
     - w3m
     - { name: 'wget', install_options: '--enable-iri' }
     - xctool
+
+mas:
+  appstore_id:       '{{ secrets.mas.appstore_id }}'
+  appstore_password: '{{ secrets.mas.appstore_password }}'
+
+  # List installed apps by
+  #
+  #   $ mas list
+  #
+  applications:
+    - '443987910'  # 1Password
+    - '1091189122' # Bear
+    - '411643860'  # DaisyDisk
+    - '539883307'  # Line
+    - '928494006'  # PopHub
+    - '803453959'  # Slack
+    - '904280696'  # Things
+    - '557168941'  # Tweetbot
+    - '1076860635' # Wantedly Chat
+    - '497799835'  # Xcode

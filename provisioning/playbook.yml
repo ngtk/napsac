@@ -16,6 +16,8 @@
       tags: ['terminal']
     - role: macos
       tags: ['macos']
+    - role: mas
+      tags: ['mas']
     - role: zsh
       tags: ['zsh']
     - role: anyenv
