@@ -49,7 +49,7 @@ Plug 'nathanaelkane/vim-indent-guides', { 'for': ['python'], 'on': ['IndentGuide
 Plug 'ngmy/vim-rubocop'
 " O
 " Plug 'open-browser.vim'
-" Plug 'osyo-manga/vim-anzu'
+Plug 'osyo-manga/vim-anzu'
 " Plug 'osyo-manga/vim-over'
 " P
 Plug 'pangloss/vim-javascript'
