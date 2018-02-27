@@ -24,6 +24,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy finder
 Plug 'junegunn/fzf.vim'
 Plug 'Quramy/tsuquyomi' " For Typescript
 Plug 'leafgarland/typescript-vim' " For Typescript
+Plug 'janko-m/vim-test' " Testing
 call plug#end()
 
 
@@ -255,3 +256,9 @@ nmap Y <Plug>(operator-flashy)
 " fzf
 " -----------------------------------------------------------------------------
 map <c-p> :Files<CR>
+
+
+" test
+" -----------------------------------------------------------------------------
+nmap <silent> <leader>n :TestNearest<CR>
+nmap <silent> <leader>t :TestFile<CR>
