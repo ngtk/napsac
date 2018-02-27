@@ -22,6 +22,7 @@
   cancel=reset --soft HEAD^
   rt=replace-text
   current-branch = rev-parse --abbrev-ref HEAD
+  cp=cherry-pick
 [ghq]
   root = ~/code
   root = ~/.go
