@@ -22,6 +22,8 @@ Plug 'tpope/vim-fugitive' " Git wrapper
 Plug 'uplus/deoplete-solargraph' " Completion for Ruby
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Fuzzy finder
 Plug 'junegunn/fzf.vim'
+Plug 'Quramy/tsuquyomi' " For Typescript
+Plug 'leafgarland/typescript-vim' " For Typescript
 call plug#end()
 
 
