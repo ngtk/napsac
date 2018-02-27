@@ -11,6 +11,7 @@ link:
   tmux/tmux.conf: .tmux.conf
   vim/conf: .vim
   vim/vimrc: .vimrc
+  nvim/init.vim: .config/nvim/init.vim
 
 ruby:
   versions:
