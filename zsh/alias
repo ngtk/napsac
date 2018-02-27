@@ -18,7 +18,7 @@ alias safari="open -a Safari"
 alias preview="open -a Preview"
 
 # Edit .vimrc
-alias vimrc='vi ~/.vimrc -c "CtrlP ~/.vim/userautoload"'
+alias vimrc='vi ~/.config/nvim/init.vim'
 alias vimp='vi ~/.vim/plug.vim && vi +PlugClean +PlugInstall +qa!'
 
 # Edit .fzf.zsh
