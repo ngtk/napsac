@@ -83,6 +83,7 @@ alias memo='vi -c :MemoNew'
 
 # source zshrc
 alias sourcezshrc='source ~/.zshrc'
+alias vizsh='vim ~/.zshrc && source ~/.zshrc'
 
 # bundler
 alias be='bundle exec'
