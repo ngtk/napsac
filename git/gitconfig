@@ -29,6 +29,7 @@
   root = ~/.vim/plugged
 [github]
 	user = ngtk
+	privatekey = /Users/ngtk/.ssh/github.com/id_rsa
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
