@@ -44,6 +44,8 @@ set softtabstop=2 " width to move in tab and
 set autoindent    " continue indentation of previous line on breaking
 set smartindent   " adjust indent of next line with end of previous line on breaking
 
+filetype plugin indent on
+
 " Show line number
 set number
 
