@@ -14,9 +14,12 @@ Plug 'jiangmiao/auto-pairs' " Auto pair
 Plug 'junegunn/vim-emoji' " Integrate emojis to plugin (for internal)
 Plug 'kana/vim-operator-user' " Define user operator (for internal)
 Plug 'keith/swift.vim' " Swift
+Plug 'mattn/emmet-vim' " Easy to write HTML
+Plug 'maxmellon/vim-jsx-pretty' " Syntax highlight for JSX
 Plug 'mitsuse/autocomplete-swift' " Completion for Swift
 Plug 'osyo-manga/vim-anzu' " Search status
 Plug 'osyo-manga/vim-over' " Easy to replace text
+Plug 'othree/yajs.vim' " Syntax highlight for Javascript
 Plug 'tpope/vim-commentary' " Switch line to code comment
 Plug 'tpope/vim-fugitive' " Git wrapper
 Plug 'uplus/deoplete-solargraph' " Completion for Ruby
@@ -264,3 +267,8 @@ map <c-p> :Files<CR>
 " -----------------------------------------------------------------------------
 nmap <silent> <leader>n :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
+
+
+" Emmet
+" -----------------------------------------------------------------------------
+autocmd FileType html,eruby,javascript.jsx,typescript imap <expr> <s-tab> emmet#expandAbbrIntelligent("\<tab>")
