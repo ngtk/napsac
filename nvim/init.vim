@@ -49,6 +49,11 @@ set smartindent   " adjust indent of next line with end of previous line on brea
 
 filetype plugin indent on
 
+augroup fileTypeIndent
+    autocmd!
+    autocmd BufNewFile,BufRead *.swift setlocal tabstop=4 softtabstop=4 shiftwidth=4
+augroup END
+
 " Show line number
 set number
 
