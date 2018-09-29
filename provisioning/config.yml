@@ -75,6 +75,7 @@ homebrew:
     - { name: 'wget', install_options: '--enable-iri' }
     - xctool
     - coreutils
+    - neovim
 
 mas:
   appstore_id:       '{{ secrets.mas.appstore_id }}'
