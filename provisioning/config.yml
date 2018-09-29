@@ -74,6 +74,7 @@ homebrew:
     - w3m
     - { name: 'wget', install_options: '--enable-iri' }
     - xctool
+    - coreutils
 
 mas:
   appstore_id:       '{{ secrets.mas.appstore_id }}'
