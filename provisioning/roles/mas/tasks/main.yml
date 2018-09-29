@@ -13,6 +13,9 @@
 #   register: mas_signin
 #   when: mas.appstore_id and mas.appstore_password
 
+- homebrew:
+  name: mas
+
 - name: install applications
   command: |
     bash -lc 'mas install {{ item | quote }}'
