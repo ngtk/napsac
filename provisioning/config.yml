@@ -34,7 +34,7 @@ homebrew:
     - google-hangouts
     - google-japanese-ime
     - iterm2
-    - karabiner
+    - karabiner-elements
     - skype
     - vagrant
     - licecap
