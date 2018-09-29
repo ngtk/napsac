@@ -85,7 +85,7 @@ mas:
   #   $ mas list
   #
   applications:
-    - '443987910'  # 1Password
+    - '1333542190' # 1Password 7
     - '1091189122' # Bear
     - '411643860'  # DaisyDisk
     - '539883307'  # Line
