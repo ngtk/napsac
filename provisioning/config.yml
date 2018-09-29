@@ -41,8 +41,6 @@ homebrew:
 
   repositories:
     - homebrew/boneyard
-    - homebrew/dupes
-    - homebrew/science
 
   packages:
     - argon/mas/mas
