@@ -38,7 +38,6 @@ homebrew:
     - skype
     - vagrant
     - licecap
-    - virtualbox
 
   repositories:
     - homebrew/boneyard
